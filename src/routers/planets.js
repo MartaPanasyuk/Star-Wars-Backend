@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 
     const planets = getAllPlanets.data.results; //
     const filteredPlanets = planets.filter((char) =>
-      char.climate.includes(climate)
+      char.climate.includes(climate.toLowerCase())
     );
     /*
   

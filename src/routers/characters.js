@@ -10,16 +10,16 @@ const router = new Router();
 router.get('/:title', async (req, res) => {
   try {
     let page = req.query.page;
-    const gender = req.query.gender;
+    let gender = req.query.gender;
     let height = req.query.height;
     let age = req.query.age;
+    let title = req.params.title;
 
-    console.log('what is page', page);
     const searchOnMovieTitle = await axios.get(
-      `https://swapi.dev/api/films/?search=${req.params.title}`
+      `https://swapi.dev/api/films/?search=${title.toLowerCase()}`
     );
 
-    const allCharactersUrls = searchOnMovieTitle.data.results[0].characters; /// [100 characters]
+    const allCharactersUrls = searchOnMovieTitle.data.results[0].characters;
 
     const allCharactersResponses = await Promise.all(
       allCharactersUrls.map(
@@ -76,7 +76,6 @@ router.get('/:title', async (req, res) => {
     ////////////////////////////////////////////////////////////////////////////////////////////////
 
     if (!page) {
-      // Adding pagination always go the last step
       page = 1;
     }
 
