@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/movie', characterRouter);
-app.use('/planet', planetRouter);
+app.use('/planets', planetRouter);
 
 app.listen(3000, () => {
   console.log('server running at 3000');
