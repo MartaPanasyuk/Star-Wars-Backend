@@ -1,7 +1,9 @@
-const express = require('express'); //load express module
+const express = require('express');
 const characterRouter = require('./routers/characters');
 
 const app = express();
+
+//Home page
 app.get('/', (req, res) => {
   res.send('Hello, World!');
 });
