@@ -28,12 +28,13 @@ Optional filter by `gender`
 Optinal sorting by `height` (ascending or descending) or by `age` (ascending or descending; characters whose age is not specified are always put to the end of list)
 
 Movie title:
-A New Hope
-The Empire Strikes Back
-Return of the Jedi
-The Phantom Menace
-Attack of the Clones
-Revenge of the Sith
+
+- A New Hope
+- The Empire Strikes Back
+- Return of the Jedi
+- The Phantom Menace
+- Attack of the Clones
+- Revenge of the Sith
 
 Example Request :
 
@@ -45,6 +46,14 @@ Example Request :
 ### 2. `/planets/?climate=<climate>`
 
 Get the [planets](https://swapi.dev/documentation#planets) name filtered by `climate` (mandatory) with details on dark-haired [residents](https://swapi.dev/documentation#people) of each planet from SWAPI
+
+Climate:
+
+- arid
+- temperate
+- tropical
+- frozen
+- murky
 
 Example request:
 
