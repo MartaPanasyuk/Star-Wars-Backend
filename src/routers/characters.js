@@ -13,10 +13,9 @@ router.get('/:title', async (req, res) => {
     let gender = req.query.gender;
     let height = req.query.height;
     let age = req.query.age;
-    let title = req.params.title;
 
     const searchOnMovieTitle = await axios.get(
-      `https://swapi.dev/api/films/?search=${title.toLowerCase()}`
+      `https://swapi.dev/api/films/?search=${req.params.title}`
     );
 
     const allCharactersUrls = searchOnMovieTitle.data.results[0].characters;
