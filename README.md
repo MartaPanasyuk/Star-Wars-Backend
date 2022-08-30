@@ -1,4 +1,4 @@
-# STAR WARS API
+# STAR WARS API Add-on
 
 # Installation
 
@@ -32,7 +32,7 @@ Example Request :
 - http://localhost:4000/movie/hope
 - http://localhost:4000/movie/hope/?gender=male
 - http://localhost:4000/movie/hope/?height=ascending
-  http://localhost:4000/movie/hope/?gender=male&age=descending
+- http://localhost:4000/movie/hope/?gender=male&age=descending
 
 ### 2. `/planets/?climate=<climate>`
 
