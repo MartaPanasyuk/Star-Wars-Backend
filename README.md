@@ -2,7 +2,7 @@
 
 # Installation
 
-- First. clone the project:  
+- First clone the project:  
   ` git clone git@github.com:MartaPanasyuk/Star-Wars-Backend.git`
 
 - Navigate into the project folder:  
