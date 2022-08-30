@@ -34,9 +34,9 @@ router.get('/:title', async (req, res) => {
       );
     }
     // Secong filter on height #1(B)
-    if (height === 'a') {
+    if (height === 'ascending') {
       resultCharacters.sort((a, b) => Number(a.height) - Number(b.height));
-    } else if (height === 'd') {
+    } else if (height === 'descending') {
       resultCharacters.sort((a, b) => Number(b.height) - Number(a.height));
     }
 
@@ -54,7 +54,7 @@ router.get('/:title', async (req, res) => {
       return age === 'unknown' || !(age.endsWith('BBY') || age.endsWith('ABY'));
     }
 
-    if (age === 'a') {
+    if (age === 'ascending') {
       resultCharacters.sort((a, b) =>
         checkInvalidAge(a.birth_year)
           ? 1
@@ -62,7 +62,7 @@ router.get('/:title', async (req, res) => {
           ? -1
           : ageConverter(b.birth_year) - ageConverter(a.birth_year)
       );
-    } else if (age === 'd') {
+    } else if (age === 'descending') {
       resultCharacters.sort((a, b) =>
         checkInvalidAge(a.birth_year)
           ? 1
